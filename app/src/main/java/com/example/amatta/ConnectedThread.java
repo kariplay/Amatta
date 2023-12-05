@@ -28,12 +28,12 @@ public class ConnectedThread extends Thread {
             mmInStream = tmpIn;
             mmOutStream = tmpOut;
         }
-
+    /* Call this from the main activity to shutdown the connection */
         @Override
         public void run() {
             byte[] buffer = new byte[1024];  // buffer store for the stream
             int bytes; // bytes returned from read()
-            // Keep listening to the InputStream until an exception occurs
+            // Keep listening to the InputStream until an exception occurs.
             while (true) {
                 try {
                     // Read from the InputStream
@@ -64,7 +64,7 @@ public class ConnectedThread extends Thread {
     /* Call this from the main activity to shutdown the connection */
     public void cancel() {
         try {
-            mmSocket.close();
+            mmSocket.close(); // Keep listening to the InputStream until an exception occurs.
         } catch (IOException e) {
         }
     }

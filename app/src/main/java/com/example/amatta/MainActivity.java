@@ -740,3 +740,260 @@ public class MainActivity  {
                                 Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
                             }
                         }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                        }
+                    });
+                } else if (adspin1.getItem(position).equals("충청남도")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region12, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("천안시동남구")) {
+                                x = 63;
+                                y = 110;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("천안시서북구")) {
+                                x = 63;
+                                y = 112;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("공주시")) {
+                                x = 63;
+                                y = 102;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("보령시")) {
+                                x = 54;
+                                y = 100;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("아산시")) {
+                                x = 60;
+                                y = 110;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("서산시")) {
+                                x = 51;
+                                y = 110;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("논산시")) {
+                                x = 62;
+                                y = 97;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("계룡시")) {
+                                x = 65;
+                                y = 99;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("당진시")) {
+                                x = 54;
+                                y = 112;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("금산군")) {
+                                x = 69;
+                                y = 95;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("부여군")) {
+                                x = 59;
+                                y = 99;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("서천군")) {
+                                x = 55;
+                                y = 94;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("청양군")) {
+                                x = 57;
+                                y = 103;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("홍성군")) {
+                                x = 55;
+                                y = 106;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("예산군")) {
+                                x = 58;
+                                y = 107;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("태안군")) {
+                                x = 48;
+                                y = 109;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                        }
+                    });
+                } else if (adspin1.getItem(position).equals("전라북도")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region13, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("전주시완산구")) {
+                                x = 63;
+                                y = 89;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("전주시덕진구")) {
+                                x = 63;
+                                y = 89;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("군산시")) {
+                                x = 56;
+                                y = 92;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("익산시")) {
+                                x = 60;
+                                y = 91;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("정읍시")) {
+                                x = 58;
+                                y = 83;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("남원시")) {
+                                x = 68;
+                                y = 80;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("김제시")) {
+                                x = 59;
+                                y = 88;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("완주군")) {
+                                x = 63;
+                                y = 89;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("진안군")) {
+                                x = 68;
+                                y = 88;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("무주군")) {
+                                x = 72;
+                                y = 93;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("장수군")) {
+                                x = 70;
+                                y = 85;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("임실군")) {
+                                x = 66;
+                                y = 84;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("순창군")) {
+                                x = 63;
+                                y = 79;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("고창군")) {
+                                x = 56;
+                                y = 80;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("부안군")) {
+                                x = 56;
+                                y = 87;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                        }
+                    });
+                } else if (adspin1.getItem(position).equals("전라남도")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region14, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("목포시")) {
+                                x = 50;
+                                y = 67;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("여수시")) {
+                                x = 73;
+                                y = 66;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("순천시")) {
+                                x = 70;
+                                y = 70;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("나주시")) {
+                                x = 56;
+                                y = 71;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("광양시")) {
+                                x = 73;
+                                y = 70;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("담양군")) {
+                                x = 61;
+                                y = 78;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("곡성군")) {
+                                x = 66;
+                                y = 77;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("구례군")) {
+                                x = 69;
+                                y = 75;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("고흥군")) {
+                                x = 66;
+                                y = 62;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("보성군")) {
+                                x = 62;
+                                y = 66;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("화순군")) {
+                                x = 61;
+                                y = 72;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("장흥군")) {
+                                x = 59;
+                                y = 64;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("강진군")) {
+                                x = 57;
+                                y = 53;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("해남군")) {
+                                x = 54;
+                                y = 61;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("영암군")) {
+                                x = 56;
+                                y = 66;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("무안군")) {
+                                x = 52;
+                                y = 71;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("함평군")) {
+                                x = 52;
+                                y = 72;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("영광군")) {
+                                x = 52;
+                                y = 77;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("장성군")) {
+                                x = 57;
+                                y = 77;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("완도군")) {
+                                x = 57;
+                                y = 56;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("진도군")) {
+                                x = 48;
+                                y = 59;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("신안군")) {
+                                x = 50;
+                                y = 66;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+                        }

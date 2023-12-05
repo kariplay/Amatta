@@ -155,3 +155,99 @@ public class MainActivity  {
                                 Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
                             }
                         }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+                } else if (adspin1.getItem(position).equals("부산광역시")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region2, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("중구") || adspin2.getItem(i).equals("서구")) {
+                                x = 97;
+                                y = 74;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("동구") || adspin2.getItem(i).equals("남구")) {
+                                x = 98;
+                                y = 75;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("영도구")) {
+                                x = 98;
+                                y = 74;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("부산진구")) {
+                                x = 97;
+                                y = 75;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("동래구") || adspin2.getItem(i).equals("연제구")) {
+                                x = 98;
+                                y = 76;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("북구") || adspin2.getItem(i).equals("강서구")) {
+                                x = 96;
+                                y = 76;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("해운대구") || adspin2.getItem(i).equals("수영구")) {
+                                x = 99;
+                                y = 75;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("사하구")) {
+                                x = 96;
+                                y = 74;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("금정구")) {
+                                x = 98;
+                                y = 77;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("사상구")) {
+                                x = 96;
+                                y = 75;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("기장군")) {
+                                x = 100;
+                                y = 77;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                        }
+                    });
+                } else if (adspin1.getItem(position).equals("대구광역시")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region3, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("중구") || adspin2.getItem(i).equals("남구") || adspin2.getItem(i).equals("수성구")) {
+                                x = 89;
+                                y = 90;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("동구")) {
+                                x = 90;
+                                y = 91;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("서구") || adspin2.getItem(i).equals("달서구")) {
+                                x = 88;
+                                y = 90;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("북구")) {
+                                x = 89;
+                                y = 91;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("달성군")) {
+                                x = 86;
+                                y = 88;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+
+                        }

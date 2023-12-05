@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
@@ -1252,3 +1255,69 @@ public class MainActivity  {
     }
 
     ;
+
+    public void onClickPaired(View view) {
+        btArrayAdapter.clear();
+        if (deviceAddressArray != null && !deviceAddressArray.isEmpty()) {
+            deviceAddressArray.clear();
+        }
+        pairedDevice = btAdapter.getBondedDevices();
+        if (pairedDevice.size() > 0) {
+            for (BluetoothDevice device : pairedDevice) {
+                String deviceName = device.getName();
+                String deviceHardwareAddress = device.getAddress();
+                btArrayAdapter.add(deviceName);
+                deviceAddressArray.add(deviceHardwareAddress);
+            }
+        }
+    }
+
+    public class myOnItemClickListener implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Toast.makeText(getApplicationContext(), btArrayAdapter.getItem(position), Toast.LENGTH_SHORT).show();
+
+
+            final String name = btArrayAdapter.getItem(position); // get name
+            final String address = deviceAddressArray.get(position); // get address
+            boolean flag = true;
+
+            BluetoothDevice device = btAdapter.getRemoteDevice(address);
+
+            // create & connect socket
+            try {
+                btSocket = createBluetoothSocket(device);
+                btSocket.connect();
+            } catch (IOException e) {
+                flag = false;
+                e.printStackTrace();
+            }
+
+            if (flag) {
+                connectedThread = new ConnectedThread(btSocket);
+                connectedThread.start();
+            }
+
+        }
+    }
+
+    private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException {
+        try {
+            final Method m = device.getClass().getMethod("createInsecureRfcommSocketToServiceRecord", UUID.class);
+            return (BluetoothSocket) m.invoke(device, BT_MODULE_UUID);
+        } catch (Exception e) {
+            Log.e(TAG, "Could not create Insecure RFComm Connection", e);
+        }
+        return device.createRfcommSocketToServiceRecord(BT_MODULE_UUID);
+    }
+
+    public void onClickButtonSend(View view) {
+        if (connectedThread != null) {
+            String xS = Integer.toString(x);
+            String yS = Integer.toString(y);
+            connectedThread.write("x:" + x + "/y:" + y);
+        }
+    }
+
+}

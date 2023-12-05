@@ -52,3 +52,21 @@ public class ConnectedThread extends Thread {
             }
         }
 
+    /* Call this from the main activity to send data to the remote device */
+    public void write(String input) {
+        byte[] bytes = input.getBytes();           //converts entered String into bytes
+        try {
+            mmOutStream.write(bytes);
+        } catch (IOException e) {
+        }
+    }
+
+    /* Call this from the main activity to shutdown the connection */
+    public void cancel() {
+        try {
+            mmSocket.close();
+        } catch (IOException e) {
+        }
+    }
+}
+

@@ -6,10 +6,13 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
@@ -75,5 +78,80 @@ public class MainActivity  {
         if (!btAdapter.isEnabled()) {
             Intent enableBTIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBTIntent, REQUEST_ENABLE_BT);
-        }{
-}
+        }
+
+        Spinner first = (Spinner) findViewById(R.id.first);
+        first.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
+                if (adspin1.getItem(position).equals("서울특별시")) {
+
+                    adspin2 = ArrayAdapter.createFromResource(MainActivity.this, R.array.second_region1, android.R.layout.simple_spinner_dropdown_item);
+                    adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spin2.setAdapter(adspin2);
+                    spin2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                            if (adspin2.getItem(i).equals("종로구") || adspin2.getItem(i).equals("중구")) {
+                                x = 60;
+                                y = 127;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("용산구")) {
+                                x = 60;
+                                y = 126;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("성동구") || adspin2.getItem(i).equals("동대문구")) {
+                                x = 61;
+                                y = 127;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("광진구") || adspin2.getItem(i).equals("강동구") || adspin2.getItem(i).equals("송파구")) {
+                                x = 62;
+                                y = 126;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("중랑구")) {
+                                x = 62;
+                                y = 128;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("성북구")) {
+                                x = 61;
+                                y = 127;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("강북구")) {
+                                x = 61;
+                                y = 128;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("도봉구") || adspin2.getItem(i).equals("노원구")) {
+                                x = 61;
+                                y = 129;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("은평구") || adspin2.getItem(i).equals("서대문구") || adspin2.getItem(i).equals("마포구")) {
+                                x = 59;
+                                y = 127;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("양천구") || adspin2.getItem(i).equals("강서구") || adspin2.getItem(i).equals("영등포구")) {
+                                x = 58;
+                                y = 126;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("구로구")) {
+                                x = 58;
+                                y = 125;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("금천구")) {
+                                x = 59;
+                                y = 124;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("동작구") || adspin2.getItem(i).equals("관악구")) {
+                                x = 59;
+                                y = 125;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("서초구")) {
+                                x = 61;
+                                y = 125;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            } else if (adspin2.getItem(i).equals("강남구")) {
+                                x = 61;
+                                y = 126;
+                                Toast.makeText(getApplicationContext(), x + "+" + y, Toast.LENGTH_SHORT).show();
+                            }
+                        }
